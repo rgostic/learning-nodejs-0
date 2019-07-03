@@ -1,7 +1,7 @@
 function sleep (time) {
   return new Promise((resolve) => setTimeout(resolve, time));
 }
-function start(response) {
+function start(response, postData) {
 
     // Do something after the sleep!
     
@@ -15,7 +15,7 @@ function start(response) {
 		</head>
 		<body>
 		<form action='/upload' method='POST'>
-			<input type='text' />
+			<input name='input' type='text' />
 			<input type='submit' value='Submit' />
 		</form>
 		</body>
@@ -29,10 +29,10 @@ function start(response) {
 	
 }
 
-function upload(response) {
+function upload(response, postData) {
 	console.log('Handler Upload was called');
 	response.writeHead(200, {'Content-Type': 'text/plain'});
-	response.write('upload was called');
+	response.write('you sent: ' + postData);
 	response.end();
 
 }
