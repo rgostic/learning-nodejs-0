@@ -1,0 +1,12 @@
+// serve web pages
+
+// server needs to handle different requests, aka router
+
+// we need to handle the requests after routing
+
+// handle post data in requests
+
+// view logic for request handlers
+
+// upload handling
+
