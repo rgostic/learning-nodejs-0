@@ -15,7 +15,8 @@ function start(response, postData) {
 		</head>
 		<body>
 		<form action='/upload' method='POST'>
-			<input name='input' type='text' />
+			<input name='title' type='text' />
+			<input name='upload' type='file' multiple='multiple' />
 			<input type='submit' value='Submit' />
 		</form>
 		</body>
