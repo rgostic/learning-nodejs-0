@@ -1,0 +1,8 @@
+Here is the key to sharing functions between objects: Whenever we call a function on an object, the
+JavaScript interpreter tries to find that function within the queried object. But if it doesn’t find the
+function within the object itself, it asks the object for the pointer to its prototype, then goes to the
+prototype, and asks for the function there. If it is found, it is then executed.
+This means that we can create myCar objects without any functions, create the honk function in
+their prototype, and end up having myCar objects that know how to honk - because everytime the
+interpreter tries to execute the honk function on one of the myCar objects, it will be redirected to
+the prototype, and execute the honk function which is defined there.
